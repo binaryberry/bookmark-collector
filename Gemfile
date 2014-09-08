@@ -1,3 +1,10 @@
 ruby '2.1.0'
+source 'https://rubygems.org'
 
-require 'sinatra'
+gem 'sinatra'
+gem 'data_mapper'
+gem 'dm-postgres-adapter'
+
+group :development, :test do
+  gem "rspec"
+ end
