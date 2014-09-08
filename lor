@@ -1,4 +1,21 @@
-[32m.[0m
+Run options: include {:focus=>true}
 
-Finished in 0.01525 seconds (files took 0.37318 seconds to load)
-[32m1 example, 0 failures[0m
+All examples were filtered out; ignoring {:focus=>true}
+[31mF[0m[32m.[0m
+
+Failures:
+
+  1) User browses the list of links when opening the homepage
+     [31mFailure/Error: expect(page).to have_content("Makers Academy")[0m
+     [31m  expected to find text "Makers Academy" in "Not Found"[0m
+     [36m# ./spec/features/listing_all_links_spec.rb:13:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.03722 seconds (files took 0.49773 seconds to load)
+[31m2 examples, 1 failure[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/listing_all_links_spec.rb:10[0m [36m# User browses the list of links when opening the homepage[0m
+
+Randomized with seed 18079
+

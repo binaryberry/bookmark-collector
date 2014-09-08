@@ -10,8 +10,11 @@ DataMapper.auto_upgrade!
 
 class BookmarkManager < Sinatra::Base
 
+  set :views, File.join(root, '..', 'views')
+  set :public_folder, File.join(root, '..', 'public')
+
   get '/' do
-    'Hello BookmarkManager!'
+    erb :index
   end
 
   # start the server if ruby file executed directly
