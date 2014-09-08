@@ -14,6 +14,7 @@ class BookmarkManager < Sinatra::Base
   set :public_folder, File.join(root, '..', 'public')
 
   get '/' do
+    @links = Link.all
     erb :index
   end
 
