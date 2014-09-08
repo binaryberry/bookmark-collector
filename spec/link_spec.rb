@@ -9,7 +9,7 @@ describe Link do
       # In the beginning our database is empty, so there are no links
       expect(Link.count).to eq(0)
       # this creates it in the database, so it's stored on the disk
-      Link.create(:title => "Makers Academy", 
+      Link.create(:title => "Makers Academy",
                   :url => "http://www.makersacademy.com/")
       # We ask the database how many links we have, it should be 1
       expect(Link.count).to eq(1)
