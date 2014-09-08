@@ -1,10 +1,33 @@
 Run options: include {:focus=>true}
 
 All examples were filtered out; ignoring {:focus=>true}
-[32m.[0m[32m.[0m
+[32m.[0m[31mF[0m[31mF[0m[32m.[0m
 
-Finished in 0.03482 seconds (files took 0.51758 seconds to load)
-[32m2 examples, 0 failures[0m
+Failures:
 
-Randomized with seed 24611
+  1) User adds a new link when browsing the homepage
+     [31mFailure/Error: fill_in 'tags', with: tags.join(' ')[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find field "tags"[0m
+     [36m# ./spec/features/adding_links_spec.rb:18:in `block in add_link'[0m
+     [36m# ./spec/features/adding_links_spec.rb:15:in `add_link'[0m
+     [36m# ./spec/features/adding_links_spec.rb:7:in `block (2 levels) in <top (required)>'[0m
+
+  2) User adds a new link with a few tags
+     [31mFailure/Error: fill_in 'tags', with: tags.join(' ')[0m
+     [31mCapybara::ElementNotFound:[0m
+     [31m  Unable to find field "tags"[0m
+     [36m# ./spec/features/adding_links_spec.rb:18:in `block in add_link'[0m
+     [36m# ./spec/features/adding_links_spec.rb:15:in `add_link'[0m
+     [36m# ./spec/features/adding_links_spec.rb:25:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.05509 seconds (files took 0.51434 seconds to load)
+[31m4 examples, 2 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/adding_links_spec.rb:4[0m [36m# User adds a new link when browsing the homepage[0m
+[31mrspec ./spec/features/adding_links_spec.rb:23[0m [36m# User adds a new link with a few tags[0m
+
+Randomized with seed 61823
 
