@@ -5,11 +5,15 @@
 		<title>Bookmark Manager</title>
 	</head>
 	<body>
-		<% if flash[:notice] %>
-			<div id="notice"><%= flash[:notice] %></div>
-		<% end %>
 		<% if current_user %>
-			Welcome, <%= current_user.email %>
+		<p>Welcome, <%= current_user.email %></p>	
+		<% end %>
+		<% if flash[:errors] && !flash[:errors].empty? %>
+		<p>Sorry, there were the following problems with the form.</p>
+			<ul id="error">
+			<% flash[:errors].each do |error| %>
+				<li><%= error %></li>
+			<% end %>
 		<% end %>
 		<%= yield %>
 	</body>
