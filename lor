@@ -1,10 +1,10 @@
 Run options: include {:focus=>true}
 
 All examples were filtered out; ignoring {:focus=>true}
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
 
-Finished in 0.10029 seconds (files took 0.52307 seconds to load)
-[32m4 examples, 0 failures[0m
+Finished in 0.15271 seconds (files took 0.53097 seconds to load)
+[32m5 examples, 0 failures[0m
 
-Randomized with seed 64151
+Randomized with seed 53752
 
