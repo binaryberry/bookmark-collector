@@ -1,10 +1,31 @@
 Run options: include {:focus=>true}
 
 All examples were filtered out; ignoring {:focus=>true}
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m
 
-Finished in 0.25452 seconds (files took 0.55295 seconds to load)
-[32m6 examples, 0 failures[0m
+Failures:
 
-Randomized with seed 35148
+  1) User signs up when being logged out
+     [31mFailure/Error: click_button "Sign up"[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `user' for #<BookmarkManager:0x000001061b0768>[0m
+     [36m# ./app/server.rb:48:in `block in <class:BookmarkManager>'[0m
+     [36m# ./spec/features/user_management_spec.rb:34:in `sign_up'[0m
+     [36m# ./spec/features/user_management_spec.rb:16:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/features/user_management_spec.rb:16:in `block (2 levels) in <top (required)>'[0m
+
+  2) User signs up with a password that doesn't match
+     [31mFailure/Error: expect(page).to have_content("Sorry, your passwords don't match")[0m
+     [31m  expected to find text "Sorry, your passwords don't match" in "Please sign up Email: Password: Password confirmation:"[0m
+     [36m# ./spec/features/user_management_spec.rb:24:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.31928 seconds (files took 0.55351 seconds to load)
+[31m7 examples, 2 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/user_management_spec.rb:15[0m [36m# User signs up when being logged out[0m
+[31mrspec ./spec/features/user_management_spec.rb:21[0m [36m# User signs up with a password that doesn't match[0m
+
+Randomized with seed 32849
 
