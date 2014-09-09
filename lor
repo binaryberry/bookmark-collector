@@ -1,10 +1,27 @@
 Run options: include {:focus=>true}
 
 All examples were filtered out; ignoring {:focus=>true}
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m
 
-Finished in 0.15271 seconds (files took 0.53097 seconds to load)
-[32m5 examples, 0 failures[0m
+Failures:
 
-Randomized with seed 53752
+  1) User signs up when being logged out
+     [31mFailure/Error: expect(page.status_code).to eq(200)[0m
+     [31m  [0m
+     [31m  expected: 200[0m
+     [31m       got: 404[0m
+     [31m  [0m
+     [31m  (compared using ==)[0m
+     [36m# ./spec/features/user_management_spec.rb:24:in `sign_up'[0m
+     [36m# ./spec/features/user_management_spec.rb:16:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/features/user_management_spec.rb:16:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.14295 seconds (files took 0.54461 seconds to load)
+[31m6 examples, 1 failure[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/user_management_spec.rb:15[0m [36m# User signs up when being logged out[0m
+
+Randomized with seed 31251
 
