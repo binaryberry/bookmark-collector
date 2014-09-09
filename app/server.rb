@@ -6,15 +6,18 @@ DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 require './lib/link' # this needs to be done after datamapper is initialised
 require './lib/tag'
 require './lib/user'
+require_relative 'helpers/application'
 
 
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
 class BookmarkManager < Sinatra::Base
-
-  set :views, File.join(root, '..', 'views')
-  set :public_folder, File.join(root, '..', 'public')
+  enable :sessions
+  set :session_secret, 'super secret'
+  
+  set :views, File.join(root, '..', '/app/views')
+  set :public_folder, File.join(root, '..', '/app/public')
 
   get '/' do
     @links = Link.all
@@ -42,10 +45,12 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/users' do
-  	User.create(:email => params[:email],
-  				:password => params[:password])
-  	redirect to('/')
+  	user = User.create(:email => params[:email],
+  						:password => params[:password])
+  	session[:user_id] = user.id
+  	redirect to ('/')
   end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0
