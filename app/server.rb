@@ -1,4 +1,4 @@
-require 'data_mapper'
+require 'data_mapper' #blablabla
 require 'sinatra/base'
 require 'rack-flash'
 require './lib/link' # this needs to be done after datamapper is initialised
