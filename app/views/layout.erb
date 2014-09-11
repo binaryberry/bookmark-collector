@@ -5,16 +5,30 @@
 		<title>Bookmark Manager</title>
 	</head>
 	<body>
+	
 		<% if current_user %>
-		<p>Welcome, <%= current_user.email %></p>	
+			Welcome, <%= current_user.email %>
+			<form method="post" action="/sessions">
+					<input type="hidden" name="_method" value="delete">
+					<input type="submit" value="sign out">
+			</form>
 		<% end %>
+
+		<% if flash[:notice] %>
+			<div id="notice">
+				<%= flash[:notice] %>
+				</div>
+		<% end %>
+
 		<% if flash[:errors] && !flash[:errors].empty? %>
-		<p>Sorry, there were the following problems with the form.</p>
+			<p>Sorry, there were the following problems with the form.</p>
 			<ul id="error">
 			<% flash[:errors].each do |error| %>
 				<li><%= error %></li>
 			<% end %>
 		<% end %>
+
 		<%= yield %>
+
 	</body>
 </html>

@@ -1,31 +1,10 @@
 Run options: include {:focus=>true}
 
 All examples were filtered out; ignoring {:focus=>true}
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
 
-Failures:
+Finished in 0.92248 seconds (files took 0.56023 seconds to load)
+[32m11 examples, 0 failures[0m
 
-  1) User signs in with incorrect credentials
-     [31mFailure/Error: fill_in 'email', :with => email[0m
-     [31mCapybara::ElementNotFound:[0m
-     [31m  Unable to find field "email"[0m
-     [36m# ./spec/features/user_login_spec.rb:27:in `sign_in'[0m
-     [36m# ./spec/features/user_login_spec.rb:21:in `block (2 levels) in <top (required)>'[0m
-
-  2) User signs in with correct credentials
-     [31mFailure/Error: fill_in 'email', :with => email[0m
-     [31mCapybara::ElementNotFound:[0m
-     [31m  Unable to find field "email"[0m
-     [36m# ./spec/features/user_login_spec.rb:27:in `sign_in'[0m
-     [36m# ./spec/features/user_login_spec.rb:14:in `block (2 levels) in <top (required)>'[0m
-
-Finished in 0.61607 seconds (files took 0.5626 seconds to load)
-[31m10 examples, 2 failures[0m
-
-Failed examples:
-
-[31mrspec ./spec/features/user_login_spec.rb:18[0m [36m# User signs in with incorrect credentials[0m
-[31mrspec ./spec/features/user_login_spec.rb:11[0m [36m# User signs in with correct credentials[0m
-
-Randomized with seed 2078
+Randomized with seed 62133
 
