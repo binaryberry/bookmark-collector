@@ -1,5 +1,6 @@
 require 'spec_helper'
 require_relative 'helper/session'
+
 	include SessionHelpers
 
 feature "User signs in" do
