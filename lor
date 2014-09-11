@@ -3,8 +3,8 @@ Run options: include {:focus=>true}
 All examples were filtered out; ignoring {:focus=>true}
 [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
 
-Finished in 0.47905 seconds (files took 0.55864 seconds to load)
+Finished in 0.53107 seconds (files took 1.09 seconds to load)
 [32m8 examples, 0 failures[0m
 
-Randomized with seed 60623
+Randomized with seed 23228
 
