@@ -1,7 +1,7 @@
 ruby '2.1.2'
 source 'https://rubygems.org'
 
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'thin'
