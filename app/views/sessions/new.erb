@@ -1,11 +1,9 @@
-<h2>Please sign in.</h2>
-<form method="post" action="/sessions">
-	email: <input type="text" name='email'>
-	password: <input type="password" name='password'>
-	<input type="submit" value="sign in">
+<h1>Please sign up</h1>
 
-	<h6>Forgotten password?</h6>
-	<form method="post" action="/sessions">
-	email: <input type="text" name='email'>
-	password: <input type="password" name='password'>
-	<input type="submit" value="sign in">
+<form action="/users" method="post">
+	Email: <input name="email" type="text" value="<%= @user.email %>" >
+	Password: <input name="password" type="password">
+	Password confirmation: <input name="password_confirmation" type="password">
+	<input type="submit" value="Sign up">
+</form>
+
