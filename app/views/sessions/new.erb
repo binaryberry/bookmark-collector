@@ -1,9 +1,9 @@
-<h1>Please sign up</h1>
+<h1>Please sign in</h1>
 
 <form action="/users" method="post">
-	Email: <input name="email" type="text" value="<%= @user.email %>" >
+	Email: <input name="email" type="text" value="<%= @user && @user.email %>" >
 	Password: <input name="password" type="password">
 	Password confirmation: <input name="password_confirmation" type="password">
-	<input type="submit" value="Sign up">
+	<input type="submit" value="sign in">
 </form>
 
