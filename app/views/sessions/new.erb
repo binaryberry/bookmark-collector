@@ -1,9 +1,8 @@
 <h1>Please sign in</h1>
 
-<form action="/users" method="post">
+<form action="/sessions" method="post">
 	Email: <input name="email" type="text" value="<%= @user && @user.email %>" >
 	Password: <input name="password" type="password">
-	Password confirmation: <input name="password_confirmation" type="password">
 	<input type="submit" value="sign in">
 </form>
 
