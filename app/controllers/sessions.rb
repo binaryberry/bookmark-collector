@@ -17,6 +17,14 @@
 		end
 	end
 
+	get '/sessions/reset_password' do
+		erb :"sessions/reset_password"
+	end
+
+	post '/sessions/reset_password' do
+		# email = params[:email]
+	end
+
 	delete '/sessions' do
 		session[:user_id] = nil
 		flash[:notice] = ["Goodbye!"]

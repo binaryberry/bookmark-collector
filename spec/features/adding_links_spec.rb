@@ -29,4 +29,5 @@ feature "User adds a new link" do
 		expect(link.tags.map(&:text)).to include("education")
 		expect(link.tags.map(&:text)).to include("ruby")
 	end
+
 end
