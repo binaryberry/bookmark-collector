@@ -2,34 +2,27 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Bookmark Manager</title>
+		<title>Bookmark Collector</title>
 		<link rel="stylesheet" type="css" href="css/style.css">
 	</head>
 	<body>
-	
-		<% if current_user %>
-			Welcome, <%= current_user.email %>
-			<form method="post" action="/sessions">
-					<input type="hidden" name="_method" value="delete">
-					<input type="submit" value="sign out">
-			</form>
-		<% end %>
+		<section class="wrapper">
 
-		<% if flash[:notice] %>
-			<div id="notice">
-				<%= flash[:notice] %>
-			</div>
-		<% end %>
-
-		<% if flash[:errors] && !flash[:errors].empty? %>
-			<p>Sorry, there were the following problems with the form.</p>
-			<ul id="error">
-			<% flash[:errors].each do |error| %>
-				<li><%= error %></li>
+			<% if flash[:notice] %>
+				<div id="notice">
+					<%= flash[:notice] %>
+				</div>
 			<% end %>
-		<% end %>
 
-		<%= yield %>
+			<% if flash[:errors] && !flash[:errors].empty? %>
+				<p>Sorry, there were the following problems with the form.</p>
+				<ul id="error">
+				<% flash[:errors].each do |error| %>
+					<li><%= error %></li>
+				<% end %>
+			<% end %>
 
+			<%= yield %>
+		</section>
 	</body>
 </html>

@@ -9,6 +9,6 @@ end
 
 task :auto_migrate do
 DataMapper.auto_migrate!
-	puts "Auto-migrate complete (data coould have been lost)"
+	puts "Auto-migrate complete (data could have been lost)"
 end
 

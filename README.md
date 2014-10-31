@@ -53,13 +53,13 @@ $ bundle
 You will need to create a database locally:
 ```shell
 $ psql postgres
-  =# create database 'bookmark_manager_test';
-  =#\q
+  =# create database 'bookmark_collector_test';
+  =# \q
 ```
 
 Migrate the required tables:
 ```shell
-rake auto_migrate
+$ rake auto_migrate
 ```
 
 Run Rspec:

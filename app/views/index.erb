@@ -1,10 +1,33 @@
-<h1>Welcome to the bookmark manager</h1>
+<header>
+	<h1 class="logo">Bookmark Collector</h1>
+	<% if current_user %>
+		
+			Welcome, <%= current_user.email %>
+			<form method="post" action="/sessions">
+					<input type="hidden" name="_method" value="delete">
+					<input type="submit" value="sign out">
+			</form>
 
-<ul>
-  <% @links.each do |link| %>
-    <li><a href="<%= link.url %>"><%= link.title %></a></li>
-  <% end %>
-</ul>
+		<% else %>
+			<form method="get" action="/users/new">
+				<input type="hidden">
+				<input type="submit" value="Not a collector? Sign up!">
+			</form>
+			<form action="/sessions" method="post">
+				Email: <input name="email" type="text" value="<%= @user && @user.email %>" >
+				Password: <input name="password" type="password"> 
+				<input type="submit" value="Sign in">
+			</form>
+			<p><a href="/sessions/reset_password">Forgotten password? </a></p>
+	<% end %>
+</header>
+	<div class = "user-links">
+	<ul>
+	  <% @links.each do |link| %>
+	    <li><a href="<%= link.url %>"><%= link.title %></a></li>
+	  <% end %>
+	</ul>
+	</div>
 <div id="new-link">
 	<form action="/links" method="POST">
 	Url: <input type="text" name="url">

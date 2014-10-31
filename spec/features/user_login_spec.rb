@@ -11,6 +11,12 @@ feature "User signs in" do
 									:password_confirmation => 'test')
 	end
 
+	scenario "from homepage" do
+		visit '/'
+		expect(page).to have_content("Sign in")
+	end
+
+
 	scenario "with correct credentials" do
 		visit '/'
 		expect(page).not_to have_content("Welcome, test@test.com")

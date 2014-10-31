@@ -16,7 +16,7 @@ require_relative 'controllers/tags'
 require_relative 'controllers/application'
 
 
-# class BookmarkManager < Sinatra::Base
+# class BookmarkCollector < Sinatra::Base
 	enable :sessions
 	# register Sinatra::Partial
 	use Rack::Flash
