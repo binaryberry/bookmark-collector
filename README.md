@@ -3,12 +3,10 @@ Bookmark Collector
 
 ## What is it?
 
-A site allowing users to save and categorise their favorite websites! Users can create their accounts and associate each link with tags. If they forget their passwords, users receive an email allowing to reset their account.
-
+A nifty tool helping people to save and categorise their favorite websites! Users can create their accounts and associate each link with tags. If they forget their passwords, they will receive an email allowing to reset their account.
 
 ##How to run it?
 It can be found [here](https://bookmarkcollector.herokuapp.com/).
-
 
 ## How was it done?
 
@@ -27,7 +25,6 @@ I pair programmed with David Wickes the first two days, then one day with Kevin 
 - Heroku
 - CSS
 
-
 ## What did I learn?
 
 - Writing a server, handling routes
@@ -38,7 +35,7 @@ I pair programmed with David Wickes the first two days, then one day with Kevin 
 
 ##Can I see the tests?
 
-Yes. First clone the repo:
+Oui! First clone the repo:
 ```shell
 $ git clone https://github.com/binaryberry/bookmark-collector.git
 ```
@@ -50,16 +47,15 @@ $ cd bookmark-collector
 
 Run bundle to load the required gems
 ```shell
-$ bundle install
+$ bundle 
 ```
 
 You will need to create a database locally:
 ```shell
 $ psql postgres
   =# create database 'bookmark_manager_test';
- \q
+  =#\q
 ```
-(don't forget the semi colon on line 2)
 
 Migrate the required tables:
 ```shell
