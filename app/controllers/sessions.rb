@@ -22,7 +22,7 @@
 	end
 
 	post '/sessions/reset_password' do
-		user = User.first(:email => params[:email])
+		user = User.first(email: params[:email])
 		if user.nil?
 			flash[:error] = ["User not found"]
 			redirect "/sessions/reset_password"
