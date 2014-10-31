@@ -9,7 +9,8 @@ class User
 
 	property :id, Serial
 	property :email, String, :unique => true
-
+	property :password_token, String
+	property :password_token_timestamp, Integer
 	  # this will store both the password and the salt
 	  # It's Text and not String because String holds
 	  # 50 characters by default

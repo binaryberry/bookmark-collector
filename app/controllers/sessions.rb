@@ -22,7 +22,17 @@
 	end
 
 	post '/sessions/reset_password' do
-		# email = params[:email]
+		user = User.first(:email => params[:email])
+		if user.nil?
+			flash[:error] = ["User not found"]
+			redirect "/sessions/reset_password"
+		end
+		user.password_token = SecureRandom.uuid
+		user.password_token_timestamp = Time.now
+		user.save
+		Mail.send_email(user)
+		flash[:notice] = "You have been sent an email to reset your password!"
+		redirect to '/'
 	end
 
 	delete '/sessions' do

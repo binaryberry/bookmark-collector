@@ -8,6 +8,7 @@ gem 'thin'
 gem 'rack-flash3'
 gem 'sinatra'
 gem 'shotgun'
+gem 'mailgun'
 gem 'sinatra-partial'
 
 group :development, :test do
