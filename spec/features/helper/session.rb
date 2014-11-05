@@ -7,19 +7,19 @@ module SessionHelpers
 				fill_in :email, :with => email
 				fill_in :password, :with => password
 				fill_in :password_confirmation, :with => password_confirmation
-				click_button "Sign up"
+				click_button('Not a collector? Sign up!')
 	end
 
 	def sign_in(email, password)
-		visit '/sessions/new'
-		fill_in 'email', :with => email
-		fill_in 'password', :with => password
-		click_button 'sign in'
+		visit '/'
+		fill_in :email, :with => email
+		fill_in :password, :with => password
+		click_button 'Sign in'
 	end
 
 	def sign_out
 		visit '/sessions/*'
 		session[:user_id] = nil
-		click_button 'sign out'
+		click_button 'Sign out'
 	end
 end

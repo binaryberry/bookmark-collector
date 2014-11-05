@@ -5,7 +5,8 @@ feature "User signs up" do
 
 		scenario "from homepage" do
 		visit '/'
-		expect(page).to have_content("Not a collector? Sign up!")
+		sign_up('a@a.com', 'pass', 'pass')
+		expect(page).to have_content("Welcome, a@a.com")
 		end
 
 

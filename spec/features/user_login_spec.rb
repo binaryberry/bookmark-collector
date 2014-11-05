@@ -13,7 +13,8 @@ feature "User signs in" do
 
 	scenario "from homepage" do
 		visit '/'
-		expect(page).to have_content("Sign in")
+		sign_in('test@test.com', 'test')
+		expect(page).to have_content("Welcome, test@test.com")
 	end
 
 
@@ -43,7 +44,7 @@ feature 'User signs out' do
 
 	scenario 'while being signed out' do
 		sign_in('test@test.com', 'test')
-		click_button "sign out"
+		click_button "Sign out"
 		expect(page).to have_content("Goodbye!") 
 		expect(page).not_to have_content("Welcome, test@test.com")
 	end
