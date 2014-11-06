@@ -10,7 +10,6 @@
 	
 		else
 			flash[:errors] = ["The email or password is incorrect"]
-			erb :index
 		end
 	end
 
