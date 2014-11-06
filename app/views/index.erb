@@ -11,7 +11,7 @@
 		<% else %>
 			<form method="get" action="/users/new">
 				<input type="hidden">
-				<input type="submit" value="Not a collector? Sign up!">
+				<input type="submit" value="Not a collector? Sign up!" id="Sign_up">
 			</form>
 			<form action="/sessions" method="post">
 				Email: <input name="email" type="text" value="<%= @user && @user.email %>" >
