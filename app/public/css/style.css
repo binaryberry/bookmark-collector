@@ -2,12 +2,37 @@
   padding: 0;
   margin: 0; }
 
-#new-link {
-  height: 700 px;
-  text-align: center;
+/*#wrapper {
+	 width: 100%;
+    height: 100%;
+    top: 5px;
+    left: 0px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    overflow: hidden;
+    visibility: visible;
+    display: block;
+    position: relative;
+
+}*/
+
+
+/*#wrapper {
+	background: #ffffff url("http://www.pleatfarm.com/wp-content/uploads/2013/01/iris-van-herpen-6-682x1024.jpg") no-repeat center bottom;
+}*/
+
+html, body {
+	text-align: center;
+	height: 100%;
+	background-image: url("http://wallpaperswa.com/download/view?resolution=1920x1200&file=MTYwMHgxMjAwLzIwMTIwMzE0L3dvb2QgZ3JheXNjYWxlIG1vbm9jaHJvbWUgd29vZCB0ZXh0dXJlIDE2MDB4MTIwMCB3YWxscGFwZXJfd3d3LndhbGxwYXBlcmhpLmNvbV8xNi5qcGc=&name=d29vZF9ncmF5c2NhbGVfbW9ub2Nocm9tZV93b29kX3RleHR1cmVfMTYwMHgxMjAwX3dhbGxwYXBlcg==");
+	background-repeat: no-repeat; 
+	background-size: 100% 100%;
 }
 
-
-#wrapper {
-	background: #ffffff url("http://www.pleatfarm.com/wp-content/uploads/2013/01/iris-van-herpen-6-682x1024.jpg") no-repeat center bottom;
+header {
+    height:50px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    width:960px;
+    margin:0px auto;
 }
