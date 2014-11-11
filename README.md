@@ -6,7 +6,39 @@ Bookmark Collector
 A nifty tool helping people to save and categorise their favorite websites! Users can create their accounts and associate each link with tags. If they forget their passwords, they will receive an email allowing to reset their account.
 
 ##How to run it?
-It can be found [here](https://bookmarkcollector.herokuapp.com/).
+
+First clone the repo:
+```shell
+$ git clone https://github.com/binaryberry/bookmark-collector.git
+```
+
+Change into the directory
+```shell
+$ cd bookmark-collector
+```
+
+Run bundle to load the required gems
+```shell
+$ bundle 
+```
+
+You will need to create the databases locally:
+```shell
+$ psql postgres
+  =# create database 'bookmark_collector_test';
+  =# create database 'bookmark_collector_development';
+  =# \q
+```
+
+Migrate the tables:
+```shell
+$ rake auto_migrate
+```
+
+If you want to see the tests, run Rspec:
+```shell
+$ rspec
+```
 
 ## How was it done?
 
@@ -22,7 +54,6 @@ I pair programmed with David Wickes the first two days, then one day with Kevin 
 - PostgreSQL
 - Datamapper
 - Mailgun
-- Heroku
 - CSS
 
 ## What did I learn?
@@ -32,37 +63,3 @@ I pair programmed with David Wickes the first two days, then one day with Kevin 
 - Handling databases
 - Creating user sessions, and allowing users to reset their passwords
 - Styling
-
-##Can I see the tests?
-
-Oui! First clone the repo:
-```shell
-$ git clone https://github.com/binaryberry/bookmark-collector.git
-```
-
-Change into the directory
-```shell
-$ cd bookmark-collector
-```
-
-Run bundle to load the required gems
-```shell
-$ bundle 
-```
-
-You will need to create a database locally:
-```shell
-$ psql postgres
-  =# create database 'bookmark_collector_test';
-  =# \q
-```
-
-Migrate the required tables:
-```shell
-$ rake auto_migrate
-```
-
-Run Rspec:
-```shell
-$ rspec
-```
