@@ -7,6 +7,6 @@
 
 
 env = ENV["RACK_ENV"] || "development"
-DataMapper.setup(:default, "postgres://localhost/bookmark_collector_db#{env}")
+DataMapper.setup(:default, "postgres://localhost/bookmark_collector_#{env}")
 DataMapper.finalize
 DataMapper.auto_upgrade!
