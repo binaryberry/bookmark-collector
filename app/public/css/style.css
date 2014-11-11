@@ -31,8 +31,68 @@ html, body {
 
 header {
     height:50px;
-    background:#F0F0F0;
-    border:1px solid #CCC;
-    width:960px;
+    background:#91AA9D;
+    width:100%;
     margin:0px auto;
+    position: relative;
 }
+
+h1 {
+	display: inline;
+	position: absolute;
+}
+
+.header_wrapper{
+	position:absolute;
+
+}
+.sign_up {
+
+  position: relative;
+  float:right;
+}
+
+.sign_in {
+
+  position: relative;
+  float:right;
+}
+
+.user-links{
+  	width: 51%;
+	height: 40px;
+	margin-left: 22.5%;
+  	font: bold 22px Arial;
+  	text-decoration: none;
+  	color: black;
+  	padding: 8px 6px 8px 6px;
+ /* border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px sol*/id #CCCCCC;
+}
+
+dt:nth-of-type(5n-4) {
+  background-color:  #FCFFF5;
+}
+
+dt:nth-of-type(5n-3) {
+  background-color:  #D1DBBD;
+}
+
+dt:nth-of-type(5n-2) {
+  background-color: #91AA9D;
+}
+
+dt:nth-of-type(5n-1) {
+  background-color: #3E606F;
+}
+
+dt:nth-of-type(5n) {
+  background-color:  #193441;
+}
+
+.new-link{
+	font-color:white;
+}
+

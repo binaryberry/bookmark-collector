@@ -1,6 +1,7 @@
 	get '/sessions' do
 		erb :index
 	end
+
 	post '/sessions' do
 		email, password = params[:email], params[:password]
 		user = User.authenticate(email, password)
@@ -12,7 +13,9 @@
 			flash[:errors] = ["The email or password is incorrect"]
 		end
 	end
-
+	get '/sessions/new' do
+		erb :"sessions/new"
+	end
 	get '/sessions/reset_password' do
 		erb :"sessions/reset_password"
 	end

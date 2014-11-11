@@ -1,38 +1,39 @@
 <header>
 	<h1 class="logo">Bookmark Collector</h1>
-	<% if current_user %>
-		
-			Welcome, <%= current_user.email %>
-			<form method="post" action="/sessions">
-					<input type="hidden" name="_method" value="delete">
-					<input type="submit" value="Sign out">
-			</form>
 
-		<% else %>
-			<form method="get" action="/users/new">
-				<input type="hidden">
-				<input type="submit" value="Not a collector? Sign up!" id="Sign_up">
-			</form>
-			<form action="/sessions" method="post">
-				Email: <input name="email" type="text" value="<%= @user && @user.email %>" >
-				Password: <input name="password" type="password"> 
-				<input type="submit" value="Sign in">
-			</form>
-			<p><a href="/sessions/reset_password">Forgotten password? </a></p>
-	<% end %>
+	<section class="header_wrapper">
+		<% if current_user %>
+			
+				<p class="welcome"> Welcome, <%= current_user.email %> </p>
+				<form method="post" action="/sessions">
+						<input type="hidden" name="_method" value="delete">
+						<input type="submit" value="Sign out">
+				</form>
+
+			<% else %>
+				<form method="get" action="/users/new" class="sign_up">
+					<input type="hidden">
+					<input type="submit" value="Not a collector? Sign up!" id="Sign_up">
+				</form>
+				<form method="get" action="/sessions/new"  class="sign_in">
+					<input type="hidden">
+					<input type="submit" value="Sign in">
+				</form>
+		<% end %>
+	</section>
 </header>
+	<div id="new-link">
+		<form action="/links" method="POST">
+		Title: <input type="text" name="title">
+		Url: <input type="text" name="url">
+		Tags: <input type="text" name="tags">
+		<input type="submit" value="Add link">
+		</form>
+	</div>
 	<div class = "user-links">
 	<ul>
 	  <% @links.each do |link| %>
-	    <li><a href="<%= link.url %>"><%= link.title %></a></li>
+	    <dt><a href="<%= link.url %>"><%= link.title %></a></li>
 	  <% end %>
 	</ul>
 	</div>
-<div id="new-link">
-	<form action="/links" method="POST">
-	Url: <input type="text" name="url">
-	Title: <input type="text" name="title">
-	Tags: <input type="text" name="tags">
-	<input type="submit" value="Add link">
-	</form>
-</div>
