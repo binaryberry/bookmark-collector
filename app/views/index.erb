@@ -1,39 +1,18 @@
-<header>
-	<h1 class="logo">Bookmark Collector</h1>
 
-	<section class="header_wrapper">
-		<% if current_user %>
-			
-				<p class="welcome"> Welcome, <%= current_user.email %> </p>
-				<form method="post" action="/sessions">
-						<input type="hidden" name="_method" value="delete">
-						<input type="submit" value="Sign out">
-				</form>
-
-			<% else %>
-				<form method="get" action="/users/new" class="sign_up">
-					<input type="hidden">
-					<input type="submit" value="Not a collector? Sign up!" id="Sign_up">
-				</form>
-				<form method="get" action="/sessions/new"  class="sign_in">
-					<input type="hidden">
-					<input type="submit" value="Sign in">
-				</form>
-		<% end %>
+	<section class="container">
+		<div id="new-link">
+			<form action="/links" method="POST" id="new-link-form">
+			<label for="title">Title</label> <input type="text" name="title">
+			<label for="url">Url</label> <input type="text" name="url">
+			<label for="tags">Tags</label> <input type="text" name="tags">
+			<span><input type="submit" value="Add link" class="button"></span>
+			</form>
+		</div>
+		<div class = "user-links">
+		<ul>
+		  <% @links.each do |link| %>
+		    <dt><a href="<%= link.url %>"><%= link.title %></a></li>
+		  <% end %>
+		</ul>
+		</div>
 	</section>
-</header>
-	<div id="new-link">
-		<form action="/links" method="POST">
-		Title: <input type="text" name="title">
-		Url: <input type="text" name="url">
-		Tags: <input type="text" name="tags">
-		<input type="submit" value="Add link">
-		</form>
-	</div>
-	<div class = "user-links">
-	<ul>
-	  <% @links.each do |link| %>
-	    <dt><a href="<%= link.url %>"><%= link.title %></a></li>
-	  <% end %>
-	</ul>
-	</div>

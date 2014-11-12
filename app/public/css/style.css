@@ -22,7 +22,6 @@
 }*/
 
 html, body {
-	text-align: center;
 	height: 100%;
 	background-image: url("http://wallpaperswa.com/download/view?resolution=1920x1200&file=MTYwMHgxMjAwLzIwMTIwMzE0L3dvb2QgZ3JheXNjYWxlIG1vbm9jaHJvbWUgd29vZCB0ZXh0dXJlIDE2MDB4MTIwMCB3YWxscGFwZXJfd3d3LndhbGxwYXBlcmhpLmNvbV8xNi5qcGc=&name=d29vZF9ncmF5c2NhbGVfbW9ub2Nocm9tZV93b29kX3RleHR1cmVfMTYwMHgxMjAwX3dhbGxwYXBlcg==");
 	background-repeat: no-repeat; 
@@ -32,9 +31,10 @@ html, body {
 header {
     height:50px;
     background:#91AA9D;
-    width:100%;
+    width:70%;
     margin:0px auto;
     position: relative;
+    text-align: center;
 }
 
 h1 {
@@ -42,8 +42,16 @@ h1 {
 	position: absolute;
 }
 
+.wrapper {
+	width: 70%;
+    margin:0px auto;
+	min-height: 100%;
+	background-color:white;
+}
+
+
 .header_wrapper{
-	position:absolute;
+	/*position:absolute;*/
 
 }
 .sign_up {
@@ -58,18 +66,48 @@ h1 {
   float:right;
 }
 
+#new-link-form {
+	width: 40%;
+	margin:0px auto;
+
+}
+#new-link-form label {
+  display: block;
+}
+
+#new-link-form input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin:2px;
+}
+
+input.button {
+  width: 30%;
+  background-color: #3E606F;
+  border-color: #3E606F;
+  border-style: none;
+  color: white;
+  border-radius: 10px;
+  line-height: 30px;
+  display: inline-block;
+}
+
+#new-link{
+	background-color:white;
+	padding: 15px;
+}
+#new-link-form span{
+  display:block;
+  text-align: center;
+}
+
+
 .user-links{
-  	width: 51%;
 	height: 40px;
-	margin-left: 22.5%;
   	font: bold 22px Arial;
   	text-decoration: none;
   	color: black;
-  	padding: 8px 6px 8px 6px;
- /* border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px sol*/id #CCCCCC;
+    text-align: center;
 }
 
 dt:nth-of-type(5n-4) {
@@ -92,7 +130,6 @@ dt:nth-of-type(5n) {
   background-color:  #193441;
 }
 
-.new-link{
-	font-color:white;
-}
+
+
 
