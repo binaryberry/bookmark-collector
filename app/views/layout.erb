@@ -9,7 +9,8 @@
 	<body>
 	<header>
 		<section class="header_wrapper">
-			<% if current_user %>
+			<div class="sign_wrapper">
+				<% if current_user %>
 				
 					<p class="welcome"> Welcome, <%= current_user.email %> </p>
 					<form method="post" action="/sessions">
@@ -26,12 +27,13 @@
 						<input type="hidden">
 						<input type="submit" value="Sign in">
 					</form>
-			<% end %>
-		</section>
-		<div>
+				<% end %>
+			</div>
+		<div class="title">
 			<h1 class="logo">Bookmark Collector</h1>
 		</div>
-</header>
+		</section>
+	</header>
 		<section class="wrapper">
 
 			<% if flash[:notice] %>
