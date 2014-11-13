@@ -11,7 +11,7 @@
 		<div class = "user-links">
 		<ul>
 		  <% @links.each do |link| %>
-		    <dt><a href="<%= link.url %>"><%= link.title %></a></li>
+		    <dt><a href="<%= link.url %>" class = "hyperlink"><%= link.title %></a></dt>
 		  <% end %>
 		</ul>
 		</div>

@@ -12,10 +12,11 @@ html, body {
 
 header {
     min-height:50px;
-    background:#91AA9D;
+    background:#193441;
     width:70%;
     margin:0px auto;
     text-align: center;
+    color: white;
 }
 
 h1 {
@@ -39,10 +40,10 @@ h1 {
   display: block;
 }
 .wrapper {
-	width: 70%;
-    margin:0px auto;
+	width: 30%;
+  margin:0px auto;
 	min-height: 100%;
-	background-color:white;
+	/*background-color:#D1DBBD;*/
 }
 
 
@@ -52,12 +53,15 @@ h1 {
 }
 
 #new-link-form {
-	width: 40%;
+	width: 60%;
 	margin:0px auto;
 
 }
 #new-link-form label {
   display: block;
+  text-align: center;
+  font-weight:800;
+  color: white;
 }
 
 #new-link-form input[type="text"] {
@@ -67,17 +71,31 @@ h1 {
 }
 
 input.button {
-  width: 30%;
+  width: 70%;
   background-color: #3E606F;
   border-color: #3E606F;
   border-style: none;
   color: white;
   border-radius: 10px;
   height: 30px;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.button2{
+  background-color: #3E606F;
+  border-color: #3E606F;
+  border-style: none;
+  color: white;
+  border-radius: 10px;
+  height: 30px;
+  padding: 10px 13px 13px 13px;
+  margin-top: 5px;
+  font-weight: bold;
 }
 
 #new-link{
-	background-color:white;
 	padding: 15px;
 }
 #new-link-form span{
@@ -87,19 +105,27 @@ input.button {
 
 
 .user-links{
-	height: 40px;
+	 height: 40px;
   	font: bold 22px Arial;
   	text-decoration: none;
-  	color: black;
     text-align: center;
 }
 
+a.hyperlink{
+  color:#1E4382;
+
+}
+
+dt{
+  color: #232C99;
+}
+
 dt:nth-of-type(5n-4) {
-  background-color:  #FCFFF5;
+  background-color:  #3E606F;
 }
 
 dt:nth-of-type(5n-3) {
-  background-color:  #D1DBBD;
+  background-color:  #6A8F87;
 }
 
 dt:nth-of-type(5n-2) {
@@ -107,12 +133,9 @@ dt:nth-of-type(5n-2) {
 }
 
 dt:nth-of-type(5n-1) {
-  background-color: #3E606F;
+  background-color: #B0CCB0;
 }
 
-dt:nth-of-type(5n) {
-  background-color:  #193441;
-}
 
 
 
