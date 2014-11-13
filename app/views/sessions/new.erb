@@ -1,6 +1,6 @@
 <form action="/sessions" method="post" class="sign_in">
-	Email: <input name="email" type="text" value="<%= @user && @user.email %>" >
-	Password: <input name="password" type="password"> 
+	<label for="email">Email</label><input name="email" type="text" value="<%= @user && @user.email %>" >
+	<label for="password">Password</label><input name="password" type="password"> 
 	<input type="submit" value="Sign in">
 </form>
 	<p class="sign_in"><a href="/sessions/reset_password">Forgotten password? </a></p>
