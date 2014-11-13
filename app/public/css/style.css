@@ -5,7 +5,7 @@
 html, body {
 	height: 100%;
 	background-image: url("http://wallpaperswa.com/download/view?resolution=1920x1200&file=MTYwMHgxMjAwLzIwMTIwMzE0L3dvb2QgZ3JheXNjYWxlIG1vbm9jaHJvbWUgd29vZCB0ZXh0dXJlIDE2MDB4MTIwMCB3YWxscGFwZXJfd3d3LndhbGxwYXBlcmhpLmNvbV8xNi5qcGc=&name=d29vZF9ncmF5c2NhbGVfbW9ub2Nocm9tZV93b29kX3RleHR1cmVfMTYwMHgxMjAwX3dhbGxwYXBlcg==");
-	background-repeat: no-repeat; 
+	background-repeat: repeat-y; 
 	background-size: 100% 100%;
   font-family: 'Helvetica Neue';
 }
@@ -13,19 +13,19 @@ html, body {
 header {
     min-height:50px;
     background:#193441;
-    width:70%;
+    width:100%;
     margin:0px auto;
     text-align: center;
     color: white;
 }
 
-h1 {
-	/*display: inline;*/
+h4{
+  color: white;
+  vertical-align: middle;
 }
 
 .sign_wrapper {
     text-align: right;
-
 }
 
 .title h1{
@@ -43,7 +43,6 @@ h1 {
 	width: 30%;
   margin:0px auto;
 	min-height: 100%;
-	/*background-color:#D1DBBD;*/
 }
 
 
@@ -53,7 +52,7 @@ h1 {
 }
 
 #new-link-form {
-	width: 60%;
+	width: 90%;
 	margin:0px auto;
 
 }
@@ -68,12 +67,13 @@ h1 {
   width: 100%;
   padding: 5px;
   margin:2px;
+  border-radius: 10px;
 }
 
 input.button {
   width: 70%;
-  background-color: #3E606F;
-  border-color: #3E606F;
+  background-color: #193441;
+  border-color: #193441;
   border-style: none;
   color: white;
   border-radius: 10px;
@@ -116,10 +116,6 @@ a.hyperlink{
 
 }
 
-dt{
-  color: #232C99;
-}
-
 dt:nth-of-type(5n-4) {
   background-color:  #3E606F;
   border-radius: 10px;
@@ -145,7 +141,67 @@ dt:nth-of-type(5n-1) {
   margin: 10px;
 }
 
+dt:nth-of-type(5n) {
+  background-color: #DCFFDC;
+  border-radius: 10px;
+  margin: 10px;
+}
 
+.sign_page_wrapper{
+  margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    color:white;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 0.8em;
+}
 
+.sign_form label {
+  display: block;
+  text-align: center;
+  font-weight:800;
+  color: white;
+}
 
+.sign_form input {
+  width: 100%;
+  padding: 5px;
+  margin:5px;
+  border-radius: 10px;
+}
 
+.sign_form[class="button"] {
+  width: 100%;
+  background-color: #193441;
+  border-color: #193441;
+  border-style: none;
+  color: white;
+  border-radius: 10px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 10px;
+}
+.forgotten_password_link{
+  color: white;
+  font-weight: 600;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.sign_out {
+  padding: 10px;
+  background-color: #3E606F;
+  border-color: #3E606F;
+  border-style: none;
+  color: white;
+  border-radius: 10px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 10px;
+
+}

@@ -15,7 +15,7 @@
 					<p class="welcome"> Welcome, <%= current_user.email %> </p>
 					<form method="post" action="/sessions">
 							<input type="hidden" name="_method" value="delete">
-							<input type="submit" value="Sign out">
+							<input type="submit" value="Sign out" class="sign_out">
 					</form>
 
 				<% else %>

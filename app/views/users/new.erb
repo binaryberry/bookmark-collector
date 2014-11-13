@@ -1,10 +1,13 @@
-<h1>Please sign up</h1>
+<section class="sign_page_wrapper">
 
-<form action="/users" method="post">
-	Email: <input name="email" type="text" value="<%= @user.email %>" >
-	Password: <input name="password" type="password">
-	Password confirmation: <input name="password_confirmation" type="password">
-	<input type="submit" value="Sign up">
-</form>
+	<form action="/users" method="post" class="sign_form">
+		<div><label for="email">Email </label></div>
+		<div><input name="email" type="text" value="<%= @user.email %>" ></div>
+		<div><label for="password">Password</label> </div>
+		<div><input name="password" type="password"></div>
+		<div><label for="password_confirmation">Password confirmation</label></div>
+		<div> <input name="password_confirmation" type="password"></div>
+		<div><input type="submit" value="Sign up" class="button"></div>
+	</form>
 
-
+</section>

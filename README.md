@@ -3,7 +3,7 @@ Bookmark Collector
 
 ## What is it?
 
-A nifty tool helping people to save and categorise their favorite websites! Users can create their accounts and associate each link with tags. If they forget their passwords, they will receive an email allowing to reset their account.
+A nifty tool helping people to save their favorite websites! Users can create their accounts and associate each link with tags. If they forget their passwords, they will receive an email allowing to reset their account.
 
 ##How to run it?
 
@@ -62,4 +62,4 @@ I pair programmed with David Wickes the first two days, then one day with Kevin 
 - Feature testing
 - Handling databases
 - Creating user sessions, and allowing users to reset their passwords
-- Styling
+- Styling with css

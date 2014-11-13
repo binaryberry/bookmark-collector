@@ -1,6 +1,8 @@
-<form action="/sessions" method="post" class="sign_in">
-	<label for="email">Email</label><input name="email" type="text" value="<%= @user && @user.email %>" >
-	<label for="password">Password</label><input name="password" type="password"> 
-	<input type="submit" value="Sign in">
-</form>
-	<p class="sign_in"><a href="/sessions/reset_password">Forgotten password? </a></p>
+<section class="sign_page_wrapper">
+	<form action="/sessions" method="post" class="sign_form">
+		<div><label for="email">Email</label></div><div><input name="email" type="text" value="<%= @user && @user.email %>" >
+		<div><label for="password">Password</label></div><div><input name="password" type="password"> 
+		<div><input type="submit" value="Sign in" class="button"></div>
+	</form>
+		<p class="sign_in"><a href="/sessions/reset_password" class="forgotten_password_link">Forgotten password? </a></p>
+<section>
