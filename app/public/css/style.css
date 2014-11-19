@@ -173,7 +173,7 @@ dt:nth-of-type(5n) {
   border-radius: 10px;
 }
 
-.sign_form[class="button"] {
+.sign_form[class="button"], .button_link {
   width: 100%;
   background-color: #193441;
   border-color: #193441;
@@ -184,6 +184,13 @@ dt:nth-of-type(5n) {
   font-weight: bold;
   font-size: 1em;
   margin-top: 10px;
+}
+
+.button_link {
+  display: inline-block;
+  line-height: 28px;
+  text-decoration: none;
+  width: 170px
 }
 .forgotten_password_link{
   color: white;

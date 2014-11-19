@@ -39,3 +39,15 @@
 		flash[:notice] = ["Goodbye!"]
 		redirect to('/')
 	end
+
+	get '/sessions/password_reset/:password_token' do
+  		erb :"sessions/password_reset"
+	end
+
+	post '/sessions/password_reset_success' do
+  		user = User.first(password_token: params[:password_token])
+  		p user
+  		user.update(password: params[:password], password_confirmation: params[:password_confirmation])
+  		p user.valid?
+		erb :"sessions/password_reset_success"
+	end
