@@ -40,14 +40,15 @@
 		redirect to('/')
 	end
 
-	get '/sessions/password_reset/:password_token' do
-  		erb :"sessions/password_reset"
+	get '/sessions/password_reset' do
+  		erb :"sessions/password_reset_request"
 	end
 
-	post '/sessions/password_reset_success' do
+	post '/sessions/password_reset' do
   		user = User.first(password_token: params[:password_token])
-  		p user
-  		user.update(password: params[:password], password_confirmation: params[:password_confirmation])
-  		p user.valid?
-		erb :"sessions/password_reset_success"
+		p params[:password_token]
+ 		p user
+ 		user.update(password: params[:password], password_confirmation: params[:password_confirmation])
+		p user
+		erb :"sessions/password_reset"
 	end
