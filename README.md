@@ -3,7 +3,7 @@ Bookmark Collector
 
 ## What is it?
 
-A nifty tool helping people to save their favorite websites! Users can create their accounts and associate each link with tags. If they forget their passwords, they will receive an email allowing to reset their account.
+A nifty tool helping people to save their favorite websites! Users can create their accounts and associate each link with tags. If they forget their passwords, they will receive an email allowing to reset it.
 
 ##How to run it?
 
