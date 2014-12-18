@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/binaryberry/bookmark-collector/badges/gpa.svg)](https://codeclimate.com/github/binaryberry/bookmark-collector)
+
 Bookmark Collector
 ================
 
