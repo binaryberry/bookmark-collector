@@ -46,9 +46,6 @@
 
 	post '/sessions/password_reset' do
   		user = User.first(password_token: params[:password_token])
-		p params[:password_token]
- 		p user
  		user.update(password: params[:password], password_confirmation: params[:password_confirmation])
-		p user
 		erb :"sessions/password_reset"
 	end
