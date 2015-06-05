@@ -3,7 +3,7 @@
 Bookmark Collector
 ================
 
-## What is it?
+##What is it?
 
 A nifty tool helping people to save their favorite websites! Users can create their accounts and associate each link with tags. If they forget their passwords, they will receive an email allowing to reset it.
 
@@ -21,7 +21,7 @@ $ cd bookmark-collector
 
 Run bundle to load the required gems
 ```shell
-$ bundle 
+$ bundle
 ```
 
 You will need to create the databases locally:
